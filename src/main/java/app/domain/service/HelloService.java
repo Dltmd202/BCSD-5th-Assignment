@@ -12,6 +12,8 @@ public class HelloService {
         this.helloRepository = helloRepository;
     }
 
+    //1초 대기
+    //레포지토리에 요청
     public String hello(){
         try {
             Thread.sleep(1000);
@@ -19,10 +21,12 @@ public class HelloService {
         return helloRepository.findHello();
     }
 
+    //레포지토리에 요청
     public String helloBody(){
         return helloRepository.findHelloBody();
     }
 
+    //exception throw
     public String helloEx() {
         throw new IllegalArgumentException();
     }
