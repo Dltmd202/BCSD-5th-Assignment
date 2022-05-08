@@ -11,7 +11,8 @@
        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 
     <mvc:annotation-driven/>
-    <context:component-scan base-package="app.controller"/>
+    <context:component-scan base-package="app.domain.controller">
+    </context:component-scan>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/views/"/>
