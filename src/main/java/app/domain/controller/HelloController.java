@@ -18,7 +18,8 @@ public class HelloController {
     @RequestMapping(value = "/helloBody", method = RequestMethod.GET)
     @ResponseBody
     public String helloBody() {
-        return helloService.helloBody();
+        helloService.helloBody();
+        return "helloBody";
     }
 
     @RequestMapping(value = "/hello" ,method = RequestMethod.GET)
